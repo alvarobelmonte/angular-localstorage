@@ -1,2 +1,2 @@
 # Devlogger
-[Demo](angular-localstorage) 
+[Demo](https://angular-localstorage.netlify.app/) 
