@@ -1,0 +1,15 @@
+<ul class="list-group" *ngIf="loaded && logs.length > 0">
+    <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let log of logs" [class.list-group-item-secondary]="selectedLog.id === log.id">
+        <a (click)="onSelect(log)" href="#">{{log.text}}</a>  
+        <span class="log-date">{{log.date | date: 'short'}}</span>
+        <i class="fa fa-remove" (click)="onDelete(log)"></i>
+    </li>
+</ul>
+
+<div *ngIf="loaded && logs.length === 0" class="text-center">
+    There are no logs in the system
+</div>
+
+<div *ngIf="!loaded" class="text-center">
+    <img src="../assets/spinner.gif" alt="loading" class="spinner">
+</div>
